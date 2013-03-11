@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/03/2013 10:50:04 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="co.themafia.hbm.Cancion" table="cancion" catalog="songstock">
+        <id name="idCancion" type="int">
+            <column name="idCancion" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="duracion" type="string">
+            <column name="duracion" length="45" />
+        </property>
+        <property name="tamano" type="java.lang.Integer">
+            <column name="tamano" />
+        </property>
+        <property name="calidad" type="java.lang.Integer">
+            <column name="calidad" />
+        </property>
+        <property name="precio" type="java.lang.Integer">
+            <column name="precio" />
+        </property>
+        <set name="discos" inverse="false" table="cancion_disco">
+            <key>
+                <column name="idCancion" not-null="true" />
+            </key>
+            <many-to-many entity-name="co.themafia.hbm.Disco">
+                <column name="idDisco" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="pedidos" inverse="true" table="pedido_cancion">
+            <key>
+                <column name="idCancion" not-null="true" />
+            </key>
+            <many-to-many entity-name="co.themafia.hbm.Pedido">
+                <column name="idPedido" not-null="true" />
+            </many-to-many>
+        </set>
+        <set name="recopilacions" inverse="false" table="cancion_recopilacion">
+            <key>
+                <column name="idCancion" not-null="true" />
+            </key>
+            <many-to-many entity-name="co.themafia.hbm.Recopilacion">
+                <column name="idRecopilacion" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>
