@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10/03/2013 10:50:04 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="co.themafia.hbm.Usuario" table="usuario" catalog="songstock">
+        <id name="idUsuario" type="int">
+            <column name="idUsuario" />
+            <generator class="assigned" />
+        </id>
+        <property name="nombre" type="string">
+            <column name="nombre" length="45" />
+        </property>
+        <property name="apellido" type="string">
+            <column name="apellido" length="45" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="45" />
+        </property>
+        <property name="cantidadCompras" type="java.lang.Integer">
+            <column name="cantidadCompras" />
+        </property>
+        <set name="pedidos" inverse="true">
+            <key>
+                <column name="idUsuario" not-null="true" />
+            </key>
+            <one-to-many class="co.themafia.hbm.Pedido" />
+        </set>
+        <set name="recopilacions" inverse="true">
+            <key>
+                <column name="idUsuario" not-null="true" />
+            </key>
+            <one-to-many class="co.themafia.hbm.Recopilacion" />
+        </set>
+    </class>
+</hibernate-mapping>
