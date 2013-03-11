@@ -5,5 +5,3 @@
 *.war
 *.ear
 /SongStock/nbproject/private/
-/SongStock/build/
-/SongStock/dist/
