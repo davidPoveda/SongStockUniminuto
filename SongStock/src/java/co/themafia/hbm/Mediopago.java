@@ -1,5 +1,5 @@
 package co.themafia.hbm;
-// Generated 10/03/2013 10:50:03 PM by Hibernate Tools 3.2.1.GA
+// Generated 11/03/2013 04:36:19 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;

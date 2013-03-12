@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 10/03/2013 10:50:04 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 11/03/2013 04:36:20 PM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="co.themafia.hbm.Conceptousuario" table="conceptousuario" catalog="songstock">
         <composite-id name="id" class="co.themafia.hbm.ConceptousuarioId">
@@ -17,6 +17,12 @@
         </many-to-one>
         <property name="concepto" type="string">
             <column name="concepto" length="45" />
+        </property>
+        <property name="calificacion" type="java.lang.Integer">
+            <column name="calificacion" />
+        </property>
+        <property name="fechaConcepto" type="string">
+            <column name="fechaConcepto" length="45" />
         </property>
     </class>
 </hibernate-mapping>

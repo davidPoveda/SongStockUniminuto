@@ -19,5 +19,6 @@
     <mapping resource="co/themafia/hbm/Proveedor.hbm.xml"/>
     <mapping resource="co/themafia/hbm/Cancion.hbm.xml"/>
     <mapping resource="co/themafia/hbm/Pedido.hbm.xml"/>
+    <mapping resource="co/themafia/hbm/Estadopedido.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 10/03/2013 10:50:04 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 11/03/2013 04:36:20 PM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="co.themafia.hbm.Pedido" table="pedido" catalog="songstock">
         <id name="idPedido" type="int">
@@ -11,12 +11,18 @@
         <many-to-one name="proveedor" class="co.themafia.hbm.Proveedor" fetch="select">
             <column name="idProveedor" not-null="true" />
         </many-to-one>
+        <many-to-one name="estadopedido" class="co.themafia.hbm.Estadopedido" fetch="select">
+            <column name="idEstado" not-null="true" />
+        </many-to-one>
         <many-to-one name="mediopago" class="co.themafia.hbm.Mediopago" fetch="select">
             <column name="idMedioPago" not-null="true" />
         </many-to-one>
         <many-to-one name="usuario" class="co.themafia.hbm.Usuario" fetch="select">
             <column name="idUsuario" not-null="true" />
         </many-to-one>
+        <property name="fechaSolicitud" type="string">
+            <column name="fechaSolicitud" length="45" />
+        </property>
         <set name="confirmacions" inverse="true">
             <key>
                 <column name="idPedido" not-null="true" />

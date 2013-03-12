@@ -1,5 +1,5 @@
 package co.themafia.hbm;
-// Generated 10/03/2013 10:50:03 PM by Hibernate Tools 3.2.1.GA
+// Generated 11/03/2013 04:36:19 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -13,8 +13,10 @@ public class Pedido  implements java.io.Serializable {
 
      private int idPedido;
      private Proveedor proveedor;
+     private Estadopedido estadopedido;
      private Mediopago mediopago;
      private Usuario usuario;
+     private String fechaSolicitud;
      private Set<Confirmacion> confirmacions = new HashSet<Confirmacion>(0);
      private Set<Conceptousuario> conceptousuarios = new HashSet<Conceptousuario>(0);
      private Set<Disco> discos = new HashSet<Disco>(0);
@@ -24,17 +26,20 @@ public class Pedido  implements java.io.Serializable {
     }
 
 	
-    public Pedido(int idPedido, Proveedor proveedor, Mediopago mediopago, Usuario usuario) {
+    public Pedido(int idPedido, Proveedor proveedor, Estadopedido estadopedido, Mediopago mediopago, Usuario usuario) {
         this.idPedido = idPedido;
         this.proveedor = proveedor;
+        this.estadopedido = estadopedido;
         this.mediopago = mediopago;
         this.usuario = usuario;
     }
-    public Pedido(int idPedido, Proveedor proveedor, Mediopago mediopago, Usuario usuario, Set<Confirmacion> confirmacions, Set<Conceptousuario> conceptousuarios, Set<Disco> discos, Set<Cancion> cancions) {
+    public Pedido(int idPedido, Proveedor proveedor, Estadopedido estadopedido, Mediopago mediopago, Usuario usuario, String fechaSolicitud, Set<Confirmacion> confirmacions, Set<Conceptousuario> conceptousuarios, Set<Disco> discos, Set<Cancion> cancions) {
        this.idPedido = idPedido;
        this.proveedor = proveedor;
+       this.estadopedido = estadopedido;
        this.mediopago = mediopago;
        this.usuario = usuario;
+       this.fechaSolicitud = fechaSolicitud;
        this.confirmacions = confirmacions;
        this.conceptousuarios = conceptousuarios;
        this.discos = discos;
@@ -55,6 +60,13 @@ public class Pedido  implements java.io.Serializable {
     public void setProveedor(Proveedor proveedor) {
         this.proveedor = proveedor;
     }
+    public Estadopedido getEstadopedido() {
+        return this.estadopedido;
+    }
+    
+    public void setEstadopedido(Estadopedido estadopedido) {
+        this.estadopedido = estadopedido;
+    }
     public Mediopago getMediopago() {
         return this.mediopago;
     }
@@ -68,6 +80,13 @@ public class Pedido  implements java.io.Serializable {
     
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
+    }
+    public String getFechaSolicitud() {
+        return this.fechaSolicitud;
+    }
+    
+    public void setFechaSolicitud(String fechaSolicitud) {
+        this.fechaSolicitud = fechaSolicitud;
     }
     public Set<Confirmacion> getConfirmacions() {
         return this.confirmacions;

@@ -4,9 +4,17 @@
         <servlet-name>ListarDiscos</servlet-name>
         <servlet-class>co.themafia.servlet.ListarDiscos</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <servlet-class>co.themafia.servlet.RegistroUsuario</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListarDiscos</servlet-name>
         <url-pattern>/ListarDiscos</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RegistroUsuario</servlet-name>
+        <url-pattern>/RegistroUsuario</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

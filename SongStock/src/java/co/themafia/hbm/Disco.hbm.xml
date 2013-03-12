@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 10/03/2013 10:50:04 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 11/03/2013 04:36:20 PM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="co.themafia.hbm.Disco" table="disco" catalog="songstock">
         <id name="idDisco" type="int">
@@ -38,8 +38,8 @@
         <property name="precioVinilo" type="java.lang.Integer">
             <column name="precioVinilo" />
         </property>
-        <property name="cantidadVinilo" type="string">
-            <column name="cantidadVinilo" length="45" />
+        <property name="cantidadVinilo" type="java.lang.Integer">
+            <column name="cantidadVinilo" />
         </property>
         <set name="pedidos" inverse="true" table="pedido_disco">
             <key>

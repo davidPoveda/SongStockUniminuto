@@ -1,5 +1,5 @@
 package co.themafia.hbm;
-// Generated 10/03/2013 10:50:03 PM by Hibernate Tools 3.2.1.GA
+// Generated 11/03/2013 04:36:19 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -22,7 +22,7 @@ public class Disco  implements java.io.Serializable {
      private Boolean vinilo;
      private Integer precioDigital;
      private Integer precioVinilo;
-     private String cantidadVinilo;
+     private Integer cantidadVinilo;
      private Set<Pedido> pedidos = new HashSet<Pedido>(0);
      private Set<Cancion> cancions = new HashSet<Cancion>(0);
 
@@ -34,7 +34,7 @@ public class Disco  implements java.io.Serializable {
         this.idDisco = idDisco;
         this.proveedor = proveedor;
     }
-    public Disco(int idDisco, Proveedor proveedor, String nombre, String artista, String imagen, String genero, Integer ano, Boolean digital, Boolean vinilo, Integer precioDigital, Integer precioVinilo, String cantidadVinilo, Set<Pedido> pedidos, Set<Cancion> cancions) {
+    public Disco(int idDisco, Proveedor proveedor, String nombre, String artista, String imagen, String genero, Integer ano, Boolean digital, Boolean vinilo, Integer precioDigital, Integer precioVinilo, Integer cantidadVinilo, Set<Pedido> pedidos, Set<Cancion> cancions) {
        this.idDisco = idDisco;
        this.proveedor = proveedor;
        this.nombre = nombre;
@@ -128,11 +128,11 @@ public class Disco  implements java.io.Serializable {
     public void setPrecioVinilo(Integer precioVinilo) {
         this.precioVinilo = precioVinilo;
     }
-    public String getCantidadVinilo() {
+    public Integer getCantidadVinilo() {
         return this.cantidadVinilo;
     }
     
-    public void setCantidadVinilo(String cantidadVinilo) {
+    public void setCantidadVinilo(Integer cantidadVinilo) {
         this.cantidadVinilo = cantidadVinilo;
     }
     public Set<Pedido> getPedidos() {

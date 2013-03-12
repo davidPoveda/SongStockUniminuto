@@ -36,8 +36,8 @@ public class DiscoDao {
     public void IngresarDisco(Proveedor p){
         try {
             session.beginTransaction();
-            Disco newDisco = new Disco(2, p, "Balck album","Metallica","","Rock",2002, Boolean.TRUE, Boolean.TRUE,12000,21000,"1", null, null);
-            session.save(newDisco);
+            //Disco newDisco = new Disco(2, p, "Balck album","Metallica","","Rock",2002, Boolean.TRUE, Boolean.TRUE,12000,21000,"1", null, null);
+            //session.save(newDisco);
             session.getTransaction().commit();
         } catch (Exception e) {
         }

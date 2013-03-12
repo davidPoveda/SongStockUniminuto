@@ -1,5 +1,5 @@
 package co.themafia.hbm;
-// Generated 10/03/2013 10:50:03 PM by Hibernate Tools 3.2.1.GA
+// Generated 11/03/2013 04:36:19 PM by Hibernate Tools 3.2.1.GA
 
 
 
@@ -12,6 +12,8 @@ public class Conceptousuario  implements java.io.Serializable {
      private ConceptousuarioId id;
      private Pedido pedido;
      private String concepto;
+     private Integer calificacion;
+     private String fechaConcepto;
 
     public Conceptousuario() {
     }
@@ -21,10 +23,12 @@ public class Conceptousuario  implements java.io.Serializable {
         this.id = id;
         this.pedido = pedido;
     }
-    public Conceptousuario(ConceptousuarioId id, Pedido pedido, String concepto) {
+    public Conceptousuario(ConceptousuarioId id, Pedido pedido, String concepto, Integer calificacion, String fechaConcepto) {
        this.id = id;
        this.pedido = pedido;
        this.concepto = concepto;
+       this.calificacion = calificacion;
+       this.fechaConcepto = fechaConcepto;
     }
    
     public ConceptousuarioId getId() {
@@ -47,6 +51,20 @@ public class Conceptousuario  implements java.io.Serializable {
     
     public void setConcepto(String concepto) {
         this.concepto = concepto;
+    }
+    public Integer getCalificacion() {
+        return this.calificacion;
+    }
+    
+    public void setCalificacion(Integer calificacion) {
+        this.calificacion = calificacion;
+    }
+    public String getFechaConcepto() {
+        return this.fechaConcepto;
+    }
+    
+    public void setFechaConcepto(String fechaConcepto) {
+        this.fechaConcepto = fechaConcepto;
     }
 
 

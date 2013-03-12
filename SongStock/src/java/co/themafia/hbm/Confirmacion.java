@@ -1,5 +1,5 @@
 package co.themafia.hbm;
-// Generated 10/03/2013 10:50:03 PM by Hibernate Tools 3.2.1.GA
+// Generated 11/03/2013 04:36:19 PM by Hibernate Tools 3.2.1.GA
 
 
 
@@ -14,6 +14,7 @@ public class Confirmacion  implements java.io.Serializable {
      private Boolean aceptada;
      private Boolean despachada;
      private String observacion;
+     private String fechaEnvio;
 
     public Confirmacion() {
     }
@@ -23,12 +24,13 @@ public class Confirmacion  implements java.io.Serializable {
         this.id = id;
         this.pedido = pedido;
     }
-    public Confirmacion(ConfirmacionId id, Pedido pedido, Boolean aceptada, Boolean despachada, String observacion) {
+    public Confirmacion(ConfirmacionId id, Pedido pedido, Boolean aceptada, Boolean despachada, String observacion, String fechaEnvio) {
        this.id = id;
        this.pedido = pedido;
        this.aceptada = aceptada;
        this.despachada = despachada;
        this.observacion = observacion;
+       this.fechaEnvio = fechaEnvio;
     }
    
     public ConfirmacionId getId() {
@@ -65,6 +67,13 @@ public class Confirmacion  implements java.io.Serializable {
     
     public void setObservacion(String observacion) {
         this.observacion = observacion;
+    }
+    public String getFechaEnvio() {
+        return this.fechaEnvio;
+    }
+    
+    public void setFechaEnvio(String fechaEnvio) {
+        this.fechaEnvio = fechaEnvio;
     }
 
 

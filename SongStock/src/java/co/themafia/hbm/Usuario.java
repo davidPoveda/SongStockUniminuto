@@ -1,5 +1,5 @@
 package co.themafia.hbm;
-// Generated 10/03/2013 10:50:03 PM by Hibernate Tools 3.2.1.GA
+// Generated 11/03/2013 04:36:19 PM by Hibernate Tools 3.2.1.GA
 
 
 import java.util.HashSet;
@@ -15,6 +15,7 @@ public class Usuario  implements java.io.Serializable {
      private String nombre;
      private String apellido;
      private String email;
+     private String contrasena;
      private Integer cantidadCompras;
      private Set<Pedido> pedidos = new HashSet<Pedido>(0);
      private Set<Recopilacion> recopilacions = new HashSet<Recopilacion>(0);
@@ -26,11 +27,12 @@ public class Usuario  implements java.io.Serializable {
     public Usuario(int idUsuario) {
         this.idUsuario = idUsuario;
     }
-    public Usuario(int idUsuario, String nombre, String apellido, String email, Integer cantidadCompras, Set<Pedido> pedidos, Set<Recopilacion> recopilacions) {
+    public Usuario(int idUsuario, String nombre, String apellido, String email, String contrasena, Integer cantidadCompras, Set<Pedido> pedidos, Set<Recopilacion> recopilacions) {
        this.idUsuario = idUsuario;
        this.nombre = nombre;
        this.apellido = apellido;
        this.email = email;
+       this.contrasena = contrasena;
        this.cantidadCompras = cantidadCompras;
        this.pedidos = pedidos;
        this.recopilacions = recopilacions;
@@ -63,6 +65,13 @@ public class Usuario  implements java.io.Serializable {
     
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getContrasena() {
+        return this.contrasena;
+    }
+    
+    public void setContrasena(String contrasena) {
+        this.contrasena = contrasena;
     }
     public Integer getCantidadCompras() {
         return this.cantidadCompras;

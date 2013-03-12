@@ -12,6 +12,8 @@
         <title>Song Stock</title>
     </head>
     <body>
-        <a href="ListarDiscos">Listar discos</a>
+        <a href="RegistroUsuario.jsp">Registro usuario</a><br>
+        <a href="ListarDiscos">Listar discos</a><br>
+        
     </body>
 </html>

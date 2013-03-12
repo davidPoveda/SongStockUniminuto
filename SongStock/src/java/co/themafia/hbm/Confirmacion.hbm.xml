@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
 "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
-<!-- Generated 10/03/2013 10:50:04 PM by Hibernate Tools 3.2.1.GA -->
+<!-- Generated 11/03/2013 04:36:20 PM by Hibernate Tools 3.2.1.GA -->
 <hibernate-mapping>
     <class name="co.themafia.hbm.Confirmacion" table="confirmacion" catalog="songstock">
         <composite-id name="id" class="co.themafia.hbm.ConfirmacionId">
@@ -23,6 +23,9 @@
         </property>
         <property name="observacion" type="string">
             <column name="observacion" length="45" />
+        </property>
+        <property name="fechaEnvio" type="string">
+            <column name="fechaEnvio" length="45" />
         </property>
     </class>
 </hibernate-mapping>
