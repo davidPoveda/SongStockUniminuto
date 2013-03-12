@@ -14,6 +14,8 @@
     <body>
         <a href="RegistroUsuario.jsp">Registro usuario</a><br>
         <a href="ListarDiscos">Listar discos</a><br>
+        <a href="IngresoUsuario.jsp">Ingresar como usuario</a><br>
+        <a href="IngresoProveedor.jsp">Ingresar como proveedor</a><br>
         
     </body>
 </html>

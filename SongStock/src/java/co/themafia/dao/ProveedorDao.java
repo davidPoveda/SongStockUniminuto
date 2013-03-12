@@ -7,6 +7,7 @@ package co.themafia.dao;
 import co.themafia.hbm.Proveedor;
 import co.themafia.hbm.Usuario;
 import co.themafia.hbm.conf.HibernateUtil;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
@@ -41,5 +42,21 @@ public class ProveedorDao {
             respuesta = true;
         }
         return respuesta;
+    }
+    
+    public Proveedor loguearProveedor (String email, String contrasena) {
+        Proveedor proveedor = null;
+        try {
+            session.beginTransaction();
+            Query query = session.createQuery("FROM Proveedor p "
+                    + "WHERE p.email = :emailP "
+                    + "AND p.contrasena = :contrasenaP");
+            query.setParameter("emailP", email);
+            query.setParameter("contrasenaP", contrasena);
+            proveedor = (Proveedor) query.uniqueResult();
+        } 
+        catch (Exception e) {
+        }
+        return proveedor;
     }
 }

@@ -8,6 +8,14 @@
         <servlet-name>RegistroUsuario</servlet-name>
         <servlet-class>co.themafia.servlet.RegistroUsuario</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>IngresoUsuario</servlet-name>
+        <servlet-class>co.themafia.servlet.IngresoUsuario</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>IngresoProveedor</servlet-name>
+        <servlet-class>co.themafia.servlet.IngresoProveedor</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListarDiscos</servlet-name>
         <url-pattern>/ListarDiscos</url-pattern>
@@ -15,6 +23,14 @@
     <servlet-mapping>
         <servlet-name>RegistroUsuario</servlet-name>
         <url-pattern>/RegistroUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresoUsuario</servlet-name>
+        <url-pattern>/IngresoUsuario</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>IngresoProveedor</servlet-name>
+        <url-pattern>/IngresoProveedor</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

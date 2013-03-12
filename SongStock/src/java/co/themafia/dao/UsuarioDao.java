@@ -6,6 +6,7 @@ package co.themafia.dao;
 
 import co.themafia.hbm.Usuario;
 import co.themafia.hbm.conf.HibernateUtil;
+import org.hibernate.Query;
 import org.hibernate.Session;
 
 /**
@@ -40,5 +41,21 @@ public class UsuarioDao {
             respuesta = true;
         }
         return respuesta;
+    }
+    
+    public Usuario loguearUsuario(String email, String contrasena) {
+        Usuario usuario = null;
+        try {
+            session.beginTransaction();
+            Query query = session.createQuery("FROM Usuario u "
+                    + "WHERE u.email = :emailP "
+                    + "AND u.contrasena = :contrasenaP");
+            query.setParameter("emailP", email);
+            query.setParameter("contrasenaP", contrasena);
+            usuario = (Usuario) query.uniqueResult();
+        } 
+        catch (Exception e) {
+        }
+        return usuario;
     }
 }
