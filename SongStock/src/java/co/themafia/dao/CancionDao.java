@@ -17,12 +17,13 @@ import org.hibernate.Session;
 public class CancionDao {
     
     Session session;
-
+    
     public CancionDao() {
         session = HibernateUtil.getSessionFactory().getCurrentSession();
     }
     
     public List<Disco> ListarDiscos(){
+    System.out.println ("");
         List<Disco> discos = new ArrayList<Disco>();
         try {
             session.beginTransaction();
