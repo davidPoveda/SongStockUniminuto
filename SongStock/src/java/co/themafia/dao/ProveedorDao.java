@@ -7,6 +7,8 @@ package co.themafia.dao;
 import co.themafia.hbm.Proveedor;
 import co.themafia.hbm.Usuario;
 import co.themafia.hbm.conf.HibernateUtil;
+import java.util.ArrayList;
+import java.util.List;
 import org.hibernate.Query;
 import org.hibernate.Session;
 
